@@ -26,6 +26,8 @@ public class EggManager : MonoBehaviour
         {
             broken.SetActive(true);
             normal.SetActive(false);
+            
+            this.GetComponent<Collider>().enabled = false;
         }
     }
 }
