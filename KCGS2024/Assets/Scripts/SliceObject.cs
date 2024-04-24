@@ -53,9 +53,10 @@ public class SliceObject : MonoBehaviour
 
     public void SetupSlicedComponent(GameObject slicedObject)
     {
+        slicedObject.layer = 3;
         Rigidbody rb = slicedObject.AddComponent<Rigidbody>();
         MeshCollider collider = slicedObject.AddComponent<MeshCollider>();
         collider.convex = true;
-        rb.AddExplosionForce(cutForce, slicedObject.transform.position, 1);
+       // rb.AddExplosionForce(cutForce, slicedObject.transform.position, 1);
     }
 }
