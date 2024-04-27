@@ -11,4 +11,3 @@
 *.meta -merge eol=lf
 *.controller -merge eol=lf
 *.spriteatlas -merge eol=lf
-*.obj -merge eol=lf
