@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Rice
+  - Slice
   layers:
   - Default
   - TransparentFX

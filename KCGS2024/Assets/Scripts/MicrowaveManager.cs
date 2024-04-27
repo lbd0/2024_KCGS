@@ -1,11 +1,14 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MicrowaveManager : MonoBehaviour
 {
+    public GameManager gameManager;
     public GameObject open_rice;
     public GameObject inMW;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,8 @@ public class MicrowaveManager : MonoBehaviour
 
             inMW.SetActive(false);
             open_rice.SetActive(true);
+
+            gameManager.changeText("밥이 다 데워졌습니다.\n뜨거우니 조심하세요.");
         }
     }
 }
