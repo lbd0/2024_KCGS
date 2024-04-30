@@ -18,6 +18,8 @@ public class SliceObject : MonoBehaviour
     public Material crossSectionMaterial;
     public float cutForce = 2000;
 
+    public int sliceCnt;
+
     private int cutCnt = 0;
 
     // Start is called before the first frame update
@@ -34,7 +36,7 @@ public class SliceObject : MonoBehaviour
         if(hasHit)
         {
             GameObject target = hit.transform.gameObject;
-            if(cutCnt < 3)
+            if(cutCnt < sliceCnt)
             {
                 Slice(target);
                 cutCnt++;
