@@ -18,6 +18,8 @@ public class Interaction_btn : MonoBehaviour
     private bool isOn = false;      // On/Off flag
     private int temperature = 0;    // initial temperature
 
+    public GameObject final_bowl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,14 +41,18 @@ public class Interaction_btn : MonoBehaviour
                 isOn = true;   // on
                 temp.text = temperature.ToString();  // temperature display
 
-                gameManager.changeText("하이라이터의 전원이 켜졌습니다.\n+버튼을 터치하여 불의 세기를 3으로 하세요.");
+                gameManager.changeText("전기레인지의 전원이 켜졌습니다.\n+버튼을 터치하여 불의 세기를 3으로 하세요.");
 
             } else     // when it's on
             {
                 isOn = false;  // off
                 temp.text = "H";   // Show hotness
 
-                gameManager.changeText("하이라이터의 전원이 꺼졌습니다.\n아직 뜨거우니 조심하세요.");
+                gameManager.changeText("전기레인지의 전원이 꺼졌습니다.\n아직 뜨거우니 조심하세요.");
+
+                StartCoroutine(Final());
+
+
             }
         } else if(other.gameObject == up)  // when you select the up button
         {
@@ -74,5 +80,14 @@ public class Interaction_btn : MonoBehaviour
                 temp.text = temperature.ToString();
             }
         }
+    }
+
+    IEnumerator Final()
+    {
+        yield return new WaitForSeconds(2);
+
+        final_bowl.SetActive(true);
+
+        gameManager.changeText("밥, 야채, 고추장, 계란후라이, 참기름을 순서대로 넣어 비빔밥을 완성하세요.\n계란후라이는 뒤집개를 이용하세요.");
     }
 }

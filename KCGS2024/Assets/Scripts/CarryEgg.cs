@@ -1,15 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RiceEnd : MonoBehaviour
+public class CarryEgg : MonoBehaviour
 {
-    public GameManager gameManager;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,9 +18,10 @@ public class RiceEnd : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "rice_open")
+        if(other.gameObject.name == "egg")
         {
-            gameManager.changeText("이제 계란후라이를 해보세요.\n전기레인지의 전원 버튼을 터치하세요.");
+            Destroy(other.gameObject);
+            this.transform.GetChild(0).gameObject.SetActive(true);  
         }
     }
 }
