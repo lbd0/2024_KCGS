@@ -49,7 +49,7 @@ public class BibimbabManager : MonoBehaviour
         else if (index == 4 && other.gameObject.name == "Egg_3")
         {
             this.transform.GetChild(index).gameObject.SetActive(true);
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             index++;
         }
         else if (index == 5 && other.gameObject.name == "sesameOil")
