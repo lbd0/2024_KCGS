@@ -7,6 +7,7 @@ public class Sliced : MonoBehaviour
 {
     public GameObject sliced;
     public GameManager gameManager;
+    public Play_Sound Play_Sound;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class Sliced : MonoBehaviour
             Destroy(other.gameObject);
 
             gameManager.changeText("야채 손질이 끝났습니다.\n이제 즉석밥을 데워보세요.");
+            Play_Sound.PlaySound(7);
         }
     }
 }

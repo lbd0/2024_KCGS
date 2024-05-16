@@ -8,6 +8,8 @@ public class MicrowaveManager : MonoBehaviour
     public GameManager gameManager;
     public GameObject open_rice;
     public GameObject inMW;
+    public Play_Sound Play_Sound;
+
 
 
     // Start is called before the first frame update
@@ -36,6 +38,7 @@ public class MicrowaveManager : MonoBehaviour
             open_rice.SetActive(true);
 
             gameManager.changeText("밥이 다 데워졌습니다.\n뜨거우니 조심하세요.");
+            Play_Sound.PlaySound(8);
         }
     }
 }
