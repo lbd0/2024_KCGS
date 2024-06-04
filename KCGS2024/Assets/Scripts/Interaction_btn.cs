@@ -88,7 +88,7 @@ public class Interaction_btn : MonoBehaviour
 
     IEnumerator Final()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
 
         final_bowl.SetActive(true);
 
