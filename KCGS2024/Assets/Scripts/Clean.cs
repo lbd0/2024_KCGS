@@ -41,24 +41,23 @@ public class Clean : MonoBehaviour
     }
     void Edu1()
     {
-        Play_Sound.PlaySound(3);
+        LookAt_Player.PlaySound(0);
         LookAt_Player.EduAnim();
         Invoke("Edu2", 9f);
     }
     void Edu2()
     {
-        Play_Sound.PlaySound(4);
+        LookAt_Player.PlaySound(1);
         Invoke("Edu3", 10f);
     }
     void Edu3()
     {
-        Play_Sound.PlaySound(5);
+        LookAt_Player.PlaySound(2);
         Invoke("Edu4", 9f);
     }
     void Edu4()
     {
         LookAt_Player.StopEduAnim();
-        LookAt_Player.lipAnim();
         Play_Sound.PlaySound(6);
     }
 }
