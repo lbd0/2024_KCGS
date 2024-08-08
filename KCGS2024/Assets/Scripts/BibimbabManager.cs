@@ -9,6 +9,7 @@ public class BibimbabManager : MonoBehaviour
 
     private int index = 1;
     public GameManager GameManager;
+    public Play_Sound Play_Sound;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +60,7 @@ public class BibimbabManager : MonoBehaviour
             index++;
 
             GameManager.changeText("비빔밥 완성~");
+            Play_Sound.PlaySound(16);
         }
         
     }
