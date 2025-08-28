@@ -3,8 +3,7 @@
 <h2>선행 연구</h2>
 <h4>VR Cooking Simulation Program for Elderly</h4>
 
-- Download Project: https://drive.google.com/file/d/1uTu_fHQpYsYhSVB-Xx1ngKAyCV6vWouB/view?usp=drive_link
-- Watch DEMO Video: https://youtu.be/r0R7ZhzAfdU
+
 
 <h2>Virtual Agent</h2>
 
