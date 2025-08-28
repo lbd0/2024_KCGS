@@ -1,5 +1,6 @@
 # 2024_KCGS
 
+[선행 연구]
 VR Cooking Simulation Program for Elderly
 
 - Download Project: https://drive.google.com/file/d/1uTu_fHQpYsYhSVB-Xx1ngKAyCV6vWouB/view?usp=drive_link
